@@ -14,3 +14,9 @@ venv/
 *.zip
 *.bin
 .vscode/
+*.png
+*.bin
+*.pcd
+*.avi
+.idea/*
+data
