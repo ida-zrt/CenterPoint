@@ -22,7 +22,16 @@ class Compose(object):
 
     def __call__(self, res, info):
         for t in self.transforms:
+            # print('transform is:')
+            # print('\t{}'.format(t))
             res, info = t(res, info)
+            # print('key after transform:')
+            # print('\t{}'.format(res.keys()))
+            # try:
+            #     print('key in res[\'lidar\'] is ')
+            #     print('\t{}'.format(res['lidar'].keys()))
+            # except:
+            #     pass
             if res is None:
                 return None
         return res, info
